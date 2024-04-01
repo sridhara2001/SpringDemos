@@ -34,7 +34,7 @@ public class AppUserServiceImpl implements UserDetailsManager {
 	@Override
 	public void createUser(UserDetails user) {
 		AppUser appUser = appUserMapper.convertToAppUser(user);
-		appUserRepository.addUser(null);
+		appUserRepository.addUser(appUser);
 	}
 
 	@Override
